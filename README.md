@@ -93,3 +93,36 @@ Below are live screenshots of the running React dashboard:
 
 ![Priority Inbox Tab](assets/screenshots/screenshot_priority_inbox.png)
 
+---
+
+## 🧩 Backend Code Walkthrough
+
+A quick look at the key backend functions powering the notification system.
+
+---
+
+### 📝 `createNotification` — Building a Notification Object
+> This function creates a new notification with a unique ID, sets default values (`read: false`, `status: 'pending'`), pushes it to the in-memory store, and instantly streams it to the logged-in user via **SSE** using `notifyUser()`.
+
+![createNotification function](assets/screenshots/code_create_notification.png)
+
+---
+
+### 🔎 `getNotificationsForUser`, `getUnreadCount` & `markRead`
+> These three utility functions handle **fetching**, **filtering**, and **updating** notifications. `markRead()` not only marks the notification as read but also pushes a live `notification.update` event back to the client via SSE — keeping the UI in sync in real time.
+
+![Notification helper functions](assets/screenshots/code_get_notifications.png)
+
+---
+
+### 🚀 Express App Setup & Middleware
+> The Express server is wired up with **CORS**, **JSON body parsing**, and the custom **logging middleware** imported from the `logging_middleware` module. All notification utility functions are destructured from `./notifications` to keep the route file clean and modular.
+
+![Express app setup](assets/screenshots/code_express_setup.png)
+
+---
+
+### 🛣️ API Routes — Notification Endpoints
+> Four REST endpoints are defined: a **health check**, a **POST** to create notifications with input validation, a **GET** to fetch all notifications for a user, and a **GET** for the unread count. The `POST` route returns `HTTP 201` on success and `HTTP 400` on missing fields.
+
+![Express API routes](assets/screenshots/code_express_routes.png)

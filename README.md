@@ -68,5 +68,21 @@ node priority_notifications.js
 
 ## 🔍 Verification & Screenshots
 
-* The system design answers (including database schemas, composite index optimization, performance strategies, and queue-based transactional logic) can be reviewed in [**`notification_system_design.md`**](notification_system_design.md).
-* A capture of the running Priority Inbox in the MUI dashboard is saved as [**`priority_inbox_screenshot.png`**](priority_inbox_screenshot.png) in the workspace root.
+The system design answers (including database schemas, composite index optimization, performance strategies, and queue-based transactional logic) can be reviewed in [**`notification_system_design.md`**](notification_system_design.md).
+
+Below are live screenshots of the running React dashboard:
+
+---
+
+### 🔔 My Notifications Tab
+![My Notifications Tab](assets/screenshots/screenshot_my_notifications.png)
+
+---
+
+### ⚙️ API Configuration Settings
+![API Configuration Settings](assets/screenshots/screenshot_api_settings.png)
+
+---
+
+### 📥 Priority Inbox — Top N Feeds
+![Priority Inbox Tab](assets/screenshots/screenshot_priority_inbox.png)

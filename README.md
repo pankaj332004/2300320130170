@@ -75,14 +75,21 @@ Below are live screenshots of the running React dashboard:
 ---
 
 ### 🔔 My Notifications Tab
+> Users log in with their **User ID** to load their personal notification history. The timeline shows all notifications with filter options — **ALL** or **UNREAD** — and a button to manually trigger a test SSE notification.
+
 ![My Notifications Tab](assets/screenshots/screenshot_my_notifications.png)
 
 ---
 
 ### ⚙️ API Configuration Settings
+> The **Settings Panel** lets users configure the remote evaluation **API Endpoint URL** and **Bearer Token** at runtime — no code changes needed. Credentials are saved locally in the browser for future sessions.
+
 ![API Configuration Settings](assets/screenshots/screenshot_api_settings.png)
 
 ---
 
 ### 📥 Priority Inbox — Top N Feeds
+> The **Priority Inbox** displays the Top-N notifications ranked by a composite priority score `(Weight × 10¹² + Timestamp)`. Users can filter by notification type, adjust page size, and paginate through results. Falls back to high-fidelity mock data when the API is unavailable.
+
 ![Priority Inbox Tab](assets/screenshots/screenshot_priority_inbox.png)
+
